@@ -1,0 +1,36 @@
+{
+    "Account edit": "帐号信息",
+    "Enterprise": "公司",
+    "Checker": "检查员",
+    "Product": "产品",
+    
+   
+    "mainpanel": {
+      "Product": "产品",
+      "Account": "帐号管理",
+      "Description for product": "进入产品页面",
+      "Add new catgory": "增加新商品类型 aa",
+      "Category": "类型",
+      "Enterprise": "企业" ,
+      "All the enterprise": "所有企业",
+      "Account management": "管理应用账户"
+    },
+   
+    "sidebar": {
+      "Category": "分类",
+      "Category register": "$t(Category)注册",
+      "Admin function": "管理员功能",
+      "Product": "产品",
+      "Traceability info":"追溯信息",
+     
+      "Organization manage": "机构管理",
+      "Account manage": "帐号管理",
+      "Checker": "检查员",
+      "Enterprise": "企业",
+      "Data manage": "追溯数据管理",
+      "Regulatory": "监管机构",
+      "Regulatory manage": "$t(Regulatory)管理",
+      "Process manage": "过程管理",
+      "Admin": "管理员"
+    }
+}

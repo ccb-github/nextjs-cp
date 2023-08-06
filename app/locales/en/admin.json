@@ -1,0 +1,20 @@
+{
+  "mainPanel": {
+    "Product": "Product",
+    "Account": "帐号管理",
+    "Description for product": "进入产品页面",
+    "Add new catgory": "增加新商品类型",
+    "Catgory": "类型",
+    "Enterprise": "公司" ,
+    "All the enterprise": "All enterprise",
+    "Account management": "管理应用账户"
+  },
+  "sideBar": {
+    "Catgory": "类型注册",
+    "Admin function": "管理员功能",
+    "Checker": "Checker",
+    "Data manage": "数据管理",
+    "Regulatory": "监管机构",
+    "Regulatory manage": "监管机构管理"
+  }
+}

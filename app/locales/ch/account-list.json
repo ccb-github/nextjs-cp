@@ -1,0 +1,10 @@
+{
+    "description": "描述",
+    "role": "角色",
+    "email": "邮箱",
+    "User ID": "用户ID",
+    "Account edit": "帐号信息",
+
+    "Set the role": "选择角色",
+    "Verified": "审核"
+}
