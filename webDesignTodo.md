@@ -1,0 +1,1 @@
+1.The lg: tailwind class

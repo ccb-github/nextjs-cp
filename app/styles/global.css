@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*This is a global style concern, make the page size as the screen*/
+body {
+	height: 100vh;
+}
+.form-body {
+	width: 80%;
+}
+/* input[type='submit']{
+	border: black solid;
+	cursor: pointer;
+} */
+#login-form-container {
+	display: flex;
+  justify-content: center;
+}
+#form-container {
+	display: flex;
+  justify-content: center;
+}
+/* #insertForm {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+} */
+.even-flex-row{
+	display: flex;
+	justify-content: space-between;
+}
+
+/* .even-flex-column{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+} */
+.form-group{
+  width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.form-group> label{
+	padding: 1rem;
+}
+
+#data-table {
+	background-color: white;
+}
+
+.table-head {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.25rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem
+}
+
+#register-link> a {
+	width: 20%;
+}
+
+/* Table general style*/
+/* table,
+th,
+td {
+  border: 1px solid;
+} */
+
+table {
+  
+  max-width: 100vw;
+  height: 500px; 
+  margin: 0 auto;
+  display: block;
+  overflow-x: auto;
+  border-radius: 2rem;
+  border-spacing: 0;
+}
+
+tbody {
+  white-space: nowrap;
+}
+
+th,
+td {
+  padding: 5px 10px;
+  /* border-top-width: 0;
+  border-left-width: 0; */
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  vertical-align: bottom;
+}
+
+/* Table stick style disabled
+th:last-child,
+td:last-child {
+  border-right-width: 0;
+}
+
+tr:last-child td {
+  border-bottom-width: 0;
+} */
+/* End Table stick style*/
+
+/*  qrcode container style*/
+.qrcode {
+  display: flex;
+  justify-content: center;
+
+}
+
+.sidebar-open {
+ 
+  display: block;
+  left: 0px;
+  right: 0px;
+  position: fixed;
+  bottom: 0px;
+  top: 3.5rem;
+  background-color: black;
+}
+
+dialog::backdrop {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 1px,
+    rgba(0, 0, 0, 0.3) 1px,
+    rgba(0, 0, 0, 0.3) 20px
+  );
+  backdrop-filter: blur(3px);
+}

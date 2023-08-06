@@ -1,0 +1,18 @@
+@startuml myseq
+participant UI as B
+participant "event handler" as eventHandler 
+participant realmApp
+participant realmClientFetch
+participant realmApplicationService
+participant realmClient
+participant server
+
+activate realmClient
+activate B
+B-> C: "trigger or enter"
+activate C
+C->>realmClientFetch:request
+activate realmClientFetch
+deactivate B
+
+@enduml myseq

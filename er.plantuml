@@ -1,0 +1,46 @@
+@startuml
+
+!define Table(x) class x << (T,#FFAAAA) >>
+!define PK(x) <b><u>x</u></b>
+!define FK(x) <u>x</u>
+
+hide circle
+hide empty members
+
+Table(Device) {
+  << (D, #FFDDBB) >>
+  <<PK>> +deviceId: int
+  manufacturer: varchar
+  productionDate: date
+  color: varchar
+  weight: float
+}
+
+Table(SerialNumber) {
+  << (D, #FFDDBB) >>
+  <<PK>> +serialNumber: int
+  +deviceId: int
+}
+
+Table(Batch) {
+  << (D, #FFDDBB) >>
+  <<PK>> +batchId: int
+  +deviceId: int
+  productionDate: date
+  location: varchar
+}
+
+Table(QualityCheck) {
+  << (D, #FFDDBB) >>
+  <<PK>> +checkId: int
+  +serialNumber: int
+  tester: varchar
+  testDate: date
+  result: varchar
+}
+
+Device  ||--o{ SerialNumber
+Device  ||--o{ Batch
+SerialNumber ||--|{ QualityCheck
+
+@enduml 0

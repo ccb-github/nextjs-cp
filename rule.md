@@ -1,0 +1,1 @@
+Every primary should be named "_id"

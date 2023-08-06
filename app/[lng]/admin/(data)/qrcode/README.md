@@ -1,0 +1,1 @@
+*This folder show the qrcode record*

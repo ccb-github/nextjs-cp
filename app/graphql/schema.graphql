@@ -1,0 +1,242 @@
+type InsertManyPayload {
+  insertedIds: [ObjectId]!
+}
+
+input CatgoryQueryInput {
+  _id: ObjectId
+  _id_gt: ObjectId
+  name_gt: String
+  OR: [CatgoryQueryInput!]
+  name_ne: String
+  name: String
+  _id_lt: ObjectId
+  createdAt_gte: DateTime
+  createdAt_exists: Boolean
+  createdAt_lt: DateTime
+  description_ne: String
+  _id_lte: ObjectId
+  name_lte: String
+  _id_gte: ObjectId
+  description_exists: Boolean
+  createdAt_gt: DateTime
+  name_gte: String
+  _id_in: [ObjectId]
+  name_lt: String
+  name_exists: Boolean
+  createdAt_ne: DateTime
+  description_lt: String
+  name_nin: [String]
+  _id_ne: ObjectId
+  createdAt_in: [DateTime]
+  createdAt_nin: [DateTime]
+  AND: [CatgoryQueryInput!]
+  description_gt: String
+  _id_nin: [ObjectId]
+  createdAt_lte: DateTime
+  description_nin: [String]
+  name_in: [String]
+  description_gte: String
+  description: String
+  _id_exists: Boolean
+  description_lte: String
+  description_in: [String]
+  createdAt: DateTime
+}
+
+type Catgory {
+  _id: ObjectId
+  createdAt: DateTime
+  description: String
+  name: String
+}
+
+type Mutation {
+  deleteManyCatgories(query: CatgoryQueryInput): DeleteManyPayload
+  deleteManyRegulatories(query: RegulatoryQueryInput): DeleteManyPayload
+  deleteOneCatgory(query: CatgoryQueryInput!): Catgory
+  deleteOneRegulatory(query: RegulatoryQueryInput!): Regulatory
+  insertManyCatgories(data: [CatgoryInsertInput!]!): InsertManyPayload
+  insertManyRegulatories(data: [RegulatoryInsertInput!]!): InsertManyPayload
+  insertOneCatgory(data: CatgoryInsertInput!): Catgory
+  insertOneRegulatory(data: RegulatoryInsertInput!): Regulatory
+  replaceOneCatgory(query: CatgoryQueryInput, data: CatgoryInsertInput!): Catgory
+  replaceOneRegulatory(query: RegulatoryQueryInput, data: RegulatoryInsertInput!): Regulatory
+  updateManyCatgories(query: CatgoryQueryInput, set: CatgoryUpdateInput!): UpdateManyPayload
+  updateManyRegulatories(query: RegulatoryQueryInput, set: RegulatoryUpdateInput!): UpdateManyPayload
+  updateOneCatgory(query: CatgoryQueryInput, set: CatgoryUpdateInput!): Catgory
+  updateOneRegulatory(query: RegulatoryQueryInput, set: RegulatoryUpdateInput!): Regulatory
+  upsertOneCatgory(query: CatgoryQueryInput, data: CatgoryInsertInput!): Catgory
+  upsertOneRegulatory(data: RegulatoryInsertInput!, query: RegulatoryQueryInput): Regulatory
+}
+
+input RegulatoryInsertInput {
+  other: String
+  ownerId: String
+  _id: ObjectId
+  address: String
+  creditCode: String
+  description: String
+  name: String
+}
+
+enum CatgorySortByInput {
+  _ID_DESC
+  CREATEDAT_ASC
+  CREATEDAT_DESC
+  DESCRIPTION_ASC
+  DESCRIPTION_DESC
+  NAME_ASC
+  NAME_DESC
+  _ID_ASC
+}
+
+
+scalar DateTime
+
+input CatgoryInsertInput {
+  createdAt: DateTime
+  description: String
+  name: String
+  _id: ObjectId
+}
+
+enum RegulatorySortByInput {
+  ADDRESS_ASC
+  CREDITCODE_ASC
+  CREDITCODE_DESC
+  DESCRIPTION_DESC
+  NAME_DESC
+  OWNERID_ASC
+  _ID_DESC
+  ADDRESS_DESC
+  DESCRIPTION_ASC
+  OWNERID_DESC
+  _ID_ASC
+  NAME_ASC
+  OTHER_ASC
+  OTHER_DESC
+}
+
+type UpdateManyPayload {
+  matchedCount: Int!
+  modifiedCount: Int!
+}
+
+input RegulatoryUpdateInput {
+  creditCode: String
+  address: String
+  description_unset: Boolean
+  name_unset: Boolean
+  name: String
+  ownerId_unset: Boolean
+  _id_unset: Boolean
+  creditCode_unset: Boolean
+  other: String
+  ownerId: String
+  address_unset: Boolean
+  other_unset: Boolean
+  description: String
+  _id: ObjectId
+}
+
+type DeleteManyPayload {
+  deletedCount: Int!
+}
+
+input RegulatoryQueryInput {
+  ownerId_gt: String
+  creditCode_gte: String
+  creditCode: String
+  other_ne: String
+  _id: ObjectId
+  description_in: [String]
+  _id_ne: ObjectId
+  name_exists: Boolean
+  _id_in: [ObjectId]
+  address_nin: [String]
+  name: String
+  address_exists: Boolean
+  ownerId_lt: String
+  address: String
+  _id_lte: ObjectId
+  other_nin: [String]
+  creditCode_ne: String
+  ownerId_nin: [String]
+  address_lte: String
+  _id_lt: ObjectId
+  address_in: [String]
+  name_in: [String]
+  ownerId_exists: Boolean
+  other_in: [String]
+  AND: [RegulatoryQueryInput!]
+  other_lte: String
+  creditCode_nin: [String]
+  name_nin: [String]
+  _id_gte: ObjectId
+  other_lt: String
+  description_exists: Boolean
+  other_exists: Boolean
+  other_gte: String
+  ownerId_in: [String]
+  _id_gt: ObjectId
+  ownerId: String
+  ownerId_gte: String
+  name_gte: String
+  description_nin: [String]
+  creditCode_gt: String
+  creditCode_lt: String
+  ownerId_ne: String
+  description_lte: String
+  creditCode_in: [String]
+  address_gte: String
+  name_ne: String
+  ownerId_lte: String
+  description_gt: String
+  name_lte: String
+  _id_nin: [ObjectId]
+  OR: [RegulatoryQueryInput!]
+  description: String
+  address_ne: String
+  creditCode_lte: String
+  creditCode_exists: Boolean
+  address_lt: String
+  name_lt: String
+  name_gt: String
+  other_gt: String
+  description_ne: String
+  description_gte: String
+  _id_exists: Boolean
+  description_lt: String
+  address_gt: String
+  other: String
+}
+
+input CatgoryUpdateInput {
+  description_unset: Boolean
+  name: String
+  name_unset: Boolean
+  _id: ObjectId
+  _id_unset: Boolean
+  createdAt: DateTime
+  createdAt_unset: Boolean
+  description: String
+}
+
+type Query {
+  catgories(query: CatgoryQueryInput, limit: Int = 100, sortBy: CatgorySortByInput): [Catgory]!
+  catgory(query: CatgoryQueryInput): Catgory
+  regulatories(query: RegulatoryQueryInput, limit: Int = 100, sortBy: RegulatorySortByInput): [Regulatory]!
+  regulatory(query: RegulatoryQueryInput): Regulatory
+}
+
+scalar ObjectId
+
+type Regulatory {
+  _id: ObjectId
+  address: String
+  creditCode: String
+  description: String
+  name: String
+  other: String
+  ownerId: String
+}
