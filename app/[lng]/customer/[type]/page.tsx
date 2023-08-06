@@ -15,7 +15,7 @@ interface PagePropsWithType extends BasePageProps {
 }  
 export default async function Page({ params: { lng, type } }: PagePropsWithType) {
   const accessToken = getCookieByName("accessToken")
-  const { product} = await getOneProduct(accessToken!)
+ 
 
   return (
     <div className="w-full overflow-y-scroll">

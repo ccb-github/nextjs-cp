@@ -33,9 +33,9 @@ export default async function ProductEditPage({ params: {lng}, searchParams}: Ba
           action="#"
           id="insertForm"
           className={`
-          grid grid-cols-1 gap-5 lg:grid-cols-2 
-          h-full overflow-y-scroll pt-2
-        `}
+            grid grid-cols-1 gap-5 lg:grid-cols-2 
+            h-full overflow-y-scroll pt-2
+          `}
         >
           {Object.keys(schemaObj.properties).map((e) =>
             templateHTML(schemaObj.properties[e])

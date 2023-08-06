@@ -4,15 +4,15 @@ import { templateHTML } from "#/components/form/templateHTML";
 import { getOneProduct } from "#/lib/api/gqlOperation";
 import { schemaJson } from "#/lib/schema";
 import { BasePageProps } from "#/types/pageProp";
-
-
-
+import { BSON } from "realm-web";
 
 export default async function ProductEditPage({ params: {lng}, searchParams}: BasePageProps) {
   console.log("This Product editpage WITHOUT THE INTERCEPT is rendered")
   const schemaObj = schemaJson["Product"]
   const { id } = searchParams
-  const { product } = await getOneProduct(id as string)
+  const { product } = await getOneProduct( { query:{  
+    _id: new BSON.ObjectId(id as string)
+  }})
   console.log(product)
   const formSubmit = (editedData: FormData) => {
     

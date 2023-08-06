@@ -7,6 +7,7 @@ import { schemaJson } from "#/lib/schema";
 import { BasePageProps } from "#/types/pageProp";
 
 import Script from "next/script";
+import { BSON } from "realm-web";
 
 export default async function ProductEditPage({
   params: { lng },
@@ -15,11 +16,11 @@ export default async function ProductEditPage({
   console.log("This Product editpage is rendered");
   const schemaObj = schemaJson["Product"];
   const { id } = searchParams;
-  const { product } = await getOneProduct(id as string);
+  const { product } = await getOneProduct({query: {
+    _id: new BSON.ObjectId(id as string)
+  }});
   console.log(product);
-  const formSubmit = (editedData: FormData) => {
-    
-  };
+  const formSubmit = (editedData: FormData) => {};
   return (
     <>
       <dialog id={"editProductDialog"}>
