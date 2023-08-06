@@ -1,4 +1,4 @@
-export default {
+const Product = {
   name: "Product",
   properties: {
     _id: {
@@ -77,3 +77,5 @@ export default {
   primaryKey: "_id",
   embedded: false,
 }
+
+export default Product

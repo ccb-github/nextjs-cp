@@ -1,4 +1,4 @@
-export default {
+const Checker = {
   name: "Checker",
   properties: {
     _id: {
@@ -43,3 +43,5 @@ export default {
   primaryKey: "_id",
   embedded: false,
 }
+
+export default Checker

@@ -1,5 +1,5 @@
-export default {
-  name: "Catgory",
+const Category = {
+  name: "Category",
   type: "selectList",
   properties: {
     _id: {
@@ -34,3 +34,4 @@ export default {
   primaryKey: "_id",
   embedded: false,
 };
+export default Category
