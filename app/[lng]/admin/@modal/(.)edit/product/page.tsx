@@ -21,7 +21,7 @@ export default async function ProductEditPage({ params: {lng}, searchParams}: Ba
     _id: new BSON.ObjectId(id as string)
   }})
   console.log(product)
-  const formSubmit = (editedData: FormData) => {
+  const formSubmit = async (editedData: FormData) => {
     "use server"
 
   }

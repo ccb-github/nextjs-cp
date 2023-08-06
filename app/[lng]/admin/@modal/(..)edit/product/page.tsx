@@ -17,7 +17,9 @@ export default async function ProductEditPage({
   const { id } = searchParams;
   const { product } = await getOneProduct(id as string);
   console.log(product);
-  const formSubmit = (editedData: FormData) => {};
+  const formSubmit = (editedData: FormData) => {
+    
+  };
   return (
     <>
       <dialog id={"editProductDialog"}>
