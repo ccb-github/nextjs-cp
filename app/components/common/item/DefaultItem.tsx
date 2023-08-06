@@ -1,5 +1,11 @@
 import { useTranslation } from "#/lib/i18n/client";
 
+/**
+ * Render default data item with html table
+ * @param {string} {lng}
+ * @param {any} {item:The data we need}
+ * @returns {any}
+ */
 export default function DefaultItem({lng, item}: {lng: string, item: any}){
   const { t } = useTranslation(lng)
   return (
@@ -8,7 +14,7 @@ export default function DefaultItem({lng, item}: {lng: string, item: any}){
         {
           Object.entries(item).map(
             (itemEntry: [string, any]) => (
-              <tr data-v-3bcbdc80="">
+              <tr data-v-3bcbdc80="" key={itemEntry[0]}>
                 <td data-v-3bcbdc80="">
                   <span data-v-3bcbdc80="" className="text-attr">
                     {t(itemEntry[0])}

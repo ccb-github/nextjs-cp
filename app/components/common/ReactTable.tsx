@@ -1,5 +1,5 @@
+//@ts-nocheck
 "use client";
-
 import { schemaJson } from "#/lib/schema";
 import { SchemaResultMapper, SchemaName } from "#/types/schema";
 import React, { useContext, useEffect, useRef } from "react";

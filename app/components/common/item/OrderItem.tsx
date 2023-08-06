@@ -61,8 +61,8 @@ export default function OrderItem({lng, order}: {lng: string, order: {
               <td >
               {
                 order.products.map( 
-                  product => 
-                  <span>
+                  (product, index: number) => 
+                  <span key={index}>
                     <Link prefetch={false} href={`./${path.split('/').slice(-1)}/product/${product.toString()}`} data-id={product}>
                       {product.toString()}
                     </Link>
