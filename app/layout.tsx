@@ -2,6 +2,7 @@ import ApolloCookieWrapper from '#/components/ApolooCookieWrapper'
 import { ConfirmContextProvider as ConfirmDialogContextProvider } from '#/context/ConfirmContextProvider'
 import '#/styles/global.css'
 import { Inter } from 'next/font/google'
+import { fallbackLng } from '#/lib/i18n/settings'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,9 +13,7 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-  params: {
-    lng
-  }
+  params
 }: {
   children: React.ReactNode,
   params: {
@@ -22,7 +21,7 @@ export default function RootLayout({
   }
 }) {
   return (
-    <html lang={lng}>
+    <html lang={fallbackLng}>
       <body className={inter.className}>
         <ApolloCookieWrapper>
           <ConfirmDialogContextProvider>
